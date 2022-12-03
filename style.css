@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -18,7 +18,7 @@
 	--dark-grey-blue1: hsl(234, 11%, 52%);
 	--dark-grey-blue2: hsl(233, 14%, 35%);
 	--dark-grey-blue3: hsl(237, 14%, 26%);
-/* Light Mode */
+	/* Light Mode */
 	--light-grey-lm: hsl(0, 0%, 98%);
 	--light-grey-blue-lm1: hsl(236, 33%, 92%);
 	--light-grey-blue-lm2: hsl(233, 11%, 84%);
@@ -30,7 +30,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	background-color: var(--dark-blue);
 	font-size: 18px;
 }
@@ -68,7 +68,7 @@ body {
 	margin: 20px 0;
 }
 
-.form img {
+.false-checkbox img {
 	opacity: 0;
 }
 
@@ -80,9 +80,9 @@ body {
 	border-radius: 50%;
 }
 
-.form input{
+.form input {
 	color: var(--dark-grey-blue1);
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	height: 50px;
 	width: 80%;
 	margin: auto 0;
@@ -95,11 +95,11 @@ body {
 	height: 20px;
 	margin: auto 10px;
 	background-color: transparent;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 }
 
 .list-container {
-	min-height: 50px;
+	min-height: 5px;
 	display: flex;
 	align-items: space-between;
 	background-color: var(--dark-desat-blue);
@@ -110,19 +110,22 @@ body {
 .list-container ul {
 	width: 100%;
 }
+
 .list-container li {
 	display: flex;
 	width: 100%;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 15px 0;
 	border-bottom: 1px solid var(--dark-grey-blue3);
 	color: var(--light-grey-blue);
 	font-size: 14px;
+	height: 50px;
 }
-li p {
+
+ul p {
 	margin: auto 0;
 }
+
 .checkbox {
 	width: 20px;
 	height: 20px;
@@ -130,8 +133,29 @@ li p {
 	background: transparent;
 	border: solid 2px var(--dark-grey-blue3);
 	border-radius: 50%;
+	accent-color: #9b59b6;
+	appearance: none;
 
 	/* background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)); */
+}
+
+.checkbox:checked {
+	appearance: none;
+	background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+	border: none;
+}
+
+.list p {
+	user-select: none;
+	pointer-events: none;
+}
+
+.tick {
+	position: absolute;
+	margin: 0 0 0 15px;
+	user-select: none;
+	pointer-events: none;
+	opacity: 0%;
 }
 
 .incomplete {
@@ -145,13 +169,17 @@ li p {
 	background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
+.checkbox {
+	user-select: none;
+	pointer-events: none;
+}
+
 .checkbox img {
 	display: none;
 	padding: 6px 5px;
 	border-radius: 50%;
-  user-select: none;
+	user-select: none;
 }
-
 
 .bottom-bar {
 	display: flex;
@@ -175,12 +203,13 @@ li p {
 .bottom-bar button {
 	background-color: transparent;
 	color: var(--dark-grey-blue2);
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 }
+
 .bottom-bar button:hover {
 	background-color: transparent;
 	color: var(--light-grey-blue);
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 }
 
 .intructions {
@@ -188,7 +217,11 @@ li p {
 	align-items: center;
 	justify-content: center;
 	color: var(--dark-grey-blue2);
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-size: 14px;
 	margin-top: 20px;
+}
+
+.bottom-bar .active {
+	color: var(--bright-blue);
 }

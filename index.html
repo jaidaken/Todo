@@ -26,20 +26,19 @@
 				<img src="./images/icon-check.svg" alt="tick">
 			</div>
 
-			<input type="text" value="" id="newItem" name="newItem" placeholder="Create a new todo..." submit>
+			<input type="text" value="" id="newItem" name="newItem" placeholder="Create a new todo..." autocomplete="off" submit>
 			<button type="submit" id="addBtn">Add</button>
 		</form>
 
 		<div class="list-container">
 			<ul class="list">
-				<li id="placehold">
-
-					<button id="checkbox" class="checkbox">
-						<img id="tick" src="./images/icon-check.svg" alt="tick">
-					</button>
+				<li id="placehold" class="placehold">
+					<div class="false-checkbox">
+						<img src="./images/icon-check.svg" alt="tick">
+					</div>
+					<img id="tick" class="tick" src="./images/icon-check.svg" alt="tick">
 
 					<p>Enter a todo item...</p>
-
 				</li>
 			</ul>
 		</div>
@@ -47,18 +46,18 @@
 
 		<div class="bottom-bar">
 			<div class="items-left">
-				<p class="dyn-num">0 </p>
+				<p id="dyn-num"></p>
 				<p>items left</p>
 			</div>
 
-			<div class="show-hide">
-				<button>All</button>
-				<button>Active</button>
-				<button>Completed</button>
+			<div id="show-hide" class="show-hide">
+				<button id="allBtn" class="active">All</button>
+				<button id="activeBtn" class="inactive">Active</button>
+				<button id="completeBtn" class="inactive">Completed</button>
 			</div>
 
 
-			<button>Clear Completed</button>
+			<button id="clearBtn">Clear Completed</button>
 		</div>
 
 		<div class="intructions">
